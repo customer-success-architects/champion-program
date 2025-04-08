@@ -37,14 +37,18 @@
       - `sql.py`
    1. Code Review
       - At the end
-
-Tomorrow:
-1. Best Practices Review
+1. When to choose which model
+   - [Choosing the right model - GitHub Docs](https://docs.github.com/en/copilot/using-github-copilot/ai-models/choosing-the-right-ai-model-for-your-task)
+1. When to use which "flavor" of Copilot
+   - Chat for branstorming / understanding / generic questions
+   - Edits when you want to generate specific, generally small to moderate snippets of code
+   - Agent when you want to iterate, make larger sweeping changes or need terminal access
+     - keep in mind agent mode will consume the most tokens and it's possible to hit api rate limits with heavy use.
 1. Prompt Files
    - Enable with setting (@vscode)
 1. URLs as context
    - "Add Context..."
-   - Must be GitHub URL
+   <!-- - Must be GitHub URL??? -->
    - "What is the latest version of Angular?"
    - "Could you write a React component for me to handling a user name and email address submission. Please, use React 19 features from https://react.dev/blog/2024/12/05/react-19#whats-new-in-react-19"
    - "Can you create me a calculator class that STRICTLY follows these style guidelines https://github.com/google/styleguide/blob/gh-pages/csharp-style.md? I cannot emphasize enough the need to follow those style guidelines line by line. I will lose my job if you don't adhere to every guideline in that document."
@@ -56,5 +60,6 @@ Tomorrow:
       - Ask Copilot to break code up or to only show changed lines
       - Ask copilot to jsut show psuedocode
       - Break problem down into smaller problems
-1. Content Exclusions
+1. Content Exclusion
+1. MCP
 
