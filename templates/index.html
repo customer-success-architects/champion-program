@@ -258,10 +258,7 @@
                     if (!response.ok) {
                         throw new Error('Failed to delete task');
                     }
-                    return response.json();
-                })
-                .then(result => {
-                    // Reload tasks to reflect the deletion
+                    // No JSON body on 204; reload tasks directly
                     loadTasks();
                 })
                 .catch(error => {

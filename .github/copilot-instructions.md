@@ -1,2 +1,3 @@
 Always write my python unit tests using pytest, not unittest.
-Start every response with a frowny face.
+
+When suggesting .NET code, only suggest code compatible with .NET 8.
