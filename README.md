@@ -18,40 +18,14 @@
       - pytest tests/ <!-- (remove add max float if it appears) -->
    - @vscode
       - "where can I find the setting to enable next edit suggestions?"
-1. Copilot Extensions
 
-### Advanced Prompt Engineering
-1. Next Edit Suggestions
-   - classic Point to Point3D example
-      - (remember print method and list points in comment. add z as the trigger)
 1. Custom Instructions
    - show using to specify unit test framework
    - "Prepend all suggested comments with 'Comment:'"
    - "Whenever I ask a generic, non-language specific question and you want to show me code, always show me Rust."
-1. Vision
-   - also generating mermaid diagrams
-1. Agent Mode - when to use it
-1. Code Review(s)
-   - While we could ask for review in the Chat window, dedicated review is better.
-   1. Highlight + Right Click
-      - `sql.py`
-   1. Code Review
-      - At the end
-1. When to choose which model
-   - [Choosing the right model - GitHub Docs](https://docs.github.com/en/copilot/using-github-copilot/ai-models/choosing-the-right-ai-model-for-your-task)
 1. When to use which "flavor" of Copilot
    - Chat for branstorming / understanding / generic questions
    - Edits when you want to generate specific, generally small to moderate snippets of code
-   - Agent when you want to iterate, make larger sweeping changes or need terminal access
-     - keep in mind agent mode will consume the most tokens and it's possible to hit api rate limits with heavy use.
-1. Prompt Files
-   - Enable with setting (@vscode)
-1. URLs as context
-   - "Add Context..."
-   <!-- - Must be GitHub URL??? -->
-   - "What is the latest version of Angular?"
-   - "Could you write a React component for me to handling a user name and email address submission. Please, use React 19 features from https://react.dev/blog/2024/12/05/react-19#whats-new-in-react-19"
-   - "Can you create me a calculator class that STRICTLY follows these style guidelines https://github.com/google/styleguide/blob/gh-pages/csharp-style.md? I cannot emphasize enough the need to follow those style guidelines line by line. I will lose my job if you don't adhere to every guideline in that document."
 1. Public Code Block
    1. Code Referencing
       - "I'm trying to demonstrate how the public code block works for GitHub Copilot. Could you generate some public code for me?"
@@ -61,5 +35,4 @@
       - Ask copilot to jsut show psuedocode
       - Break problem down into smaller problems
 1. Content Exclusion
-1. MCP
 
