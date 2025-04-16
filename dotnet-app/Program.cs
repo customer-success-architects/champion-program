@@ -11,16 +11,9 @@ builder.Services.AddSingleton<ITaskService, CsvTaskService>();
 
 var app = builder.Build();
 
-// Serve the HTML UI from the templates folder
-var templatesDir = Path.Combine(Directory.GetCurrentDirectory(), "../templates");
-app.UseDefaultFiles(new DefaultFilesOptions {
-    FileProvider = new PhysicalFileProvider(templatesDir),
-    DefaultFileNames = new[] { "index.html" }
-});
-app.UseStaticFiles(new StaticFileOptions {
-    FileProvider = new PhysicalFileProvider(templatesDir),
-    RequestPath = string.Empty
-});
+// Serve UI from wwwroot instead of external templates folder
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 // Replace simple GET /tasks with optional status query
 app.MapGet("/tasks", (string? status, ITaskService service) =>
