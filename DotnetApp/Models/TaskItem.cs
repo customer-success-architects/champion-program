@@ -1,8 +1,8 @@
 using System.Text.Json.Serialization;
 
-namespace dotnet_app.Models
+namespace DotnetApp.Models
 {
-    public class TaskDto
+    public class TaskItem
     {
         public int Id { get; set; }
         public string Title { get; set; } = default!;

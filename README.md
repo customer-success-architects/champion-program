@@ -32,7 +32,7 @@ Copilot Chat Extension | 0.23.0
 
 1. Custom Instructions
    - show using to specify unit test framework
-   - "Prepend all suggested comments with 'Comment:'"
+   - "When suggesting .NET code, only suggest code compatible with .NET 8."
    - "Whenever I ask a generic, non-language specific question and you want to show me code, always show me Rust."
 1. When to use which "flavor" of Copilot
    - Chat for brainstorming / understanding / generic questions

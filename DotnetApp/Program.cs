@@ -1,8 +1,8 @@
 ﻿using System.IO;
 using System.Linq;
 using Microsoft.Extensions.FileProviders;
-using dotnet_app.Services;
-using dotnet_app.Models;
+using DotnetApp.Services;
+using DotnetApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -18,27 +18,27 @@ app.UseStaticFiles();
 // Replace simple GET /tasks with optional status query
 app.MapGet("/tasks", (string? status, ITaskService service) =>
 {
-    var tasks = service.GetAll();
+    var tasks = service.GetAllTasks();
     if (!string.IsNullOrEmpty(status))
         tasks = tasks.Where(t => t.Status == status);
     return Results.Ok(tasks);
 });
 app.MapGet("/tasks/{id}", (int id, ITaskService service) =>
-    service.GetById(id) is TaskDto task ? Results.Ok(task) : Results.NotFound());
-app.MapPost("/tasks", (TaskDto task, ITaskService service) =>
+    service.GetTaskById(id) is TaskItem task ? Results.Ok(task) : Results.NotFound());
+app.MapPost("/tasks", (TaskItem task, ITaskService service) =>
 {
-    service.Create(task);
+    service.CreateTask(task);
     return Results.Created($"/tasks/{task.Id}", task);
 });
 // Update returns the modified task JSON instead of NoContent
-app.MapPut("/tasks/{id}", (int id, TaskDto inputTask, ITaskService service) =>
+app.MapPut("/tasks/{id}", (int id, TaskItem updatedTask, ITaskService service) =>
 {
-    inputTask.Id = id;
-    return service.Update(id, inputTask)
-        ? Results.Ok(inputTask)
+    updatedTask.Id = id;
+    return service.UpdateTask(id, updatedTask)
+        ? Results.Ok(updatedTask)
         : Results.NotFound();
 });
 app.MapDelete("/tasks/{id}", (int id, ITaskService service) =>
-    service.Delete(id) ? Results.NoContent() : Results.NotFound());
+    service.DeleteTask(id) ? Results.NoContent() : Results.NotFound());
 
 app.Run();

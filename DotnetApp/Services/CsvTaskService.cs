@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using dotnet_app.Models;
+using DotnetApp.Models;
 
-namespace dotnet_app.Services
+namespace DotnetApp.Services
 {
     public class CsvTaskService : ITaskService
     {
@@ -25,7 +25,7 @@ namespace dotnet_app.Services
             _nextId = tasks.Any() ? tasks.Max(t => t.Id) : 0;
         }
 
-        private List<TaskDto> ReadAll()
+        private List<TaskItem> ReadAll()
         {
             var lines = File.ReadAllLines(_filePath);
             return lines
@@ -34,7 +34,7 @@ namespace dotnet_app.Services
                 .Select(line =>
                 {
                     var parts = line.Split(',');
-                    return new TaskDto
+                    return new TaskItem
                     {
                         Id = int.Parse(parts[0]),
                         Title = parts[1],
@@ -48,7 +48,7 @@ namespace dotnet_app.Services
                 .ToList();
         }
 
-        private void WriteAll(IEnumerable<TaskDto> tasks)
+        private void WriteAll(IEnumerable<TaskItem> tasks)
         {
             var lines = new List<string> { "Id,Title,Description,IsCompleted,Status,Priority,CreatedAt" };
             lines.AddRange(tasks.Select(t =>
@@ -67,11 +67,12 @@ namespace dotnet_app.Services
 
         private string Escape(string? value) => value?.Replace("\"", "\"\"") ?? string.Empty;
 
-        public IEnumerable<TaskDto> GetAll() => ReadAll();
+        // Rename public methods to match ITaskService
+        public IEnumerable<TaskItem> GetAllTasks() => ReadAll();
 
-        public TaskDto? GetById(int id) => ReadAll().FirstOrDefault(t => t.Id == id);
+        public TaskItem? GetTaskById(int id) => ReadAll().FirstOrDefault(t => t.Id == id);
 
-        public void Create(TaskDto task)
+        public void CreateTask(TaskItem task)
         {
             lock (_lock)
             {
@@ -82,7 +83,7 @@ namespace dotnet_app.Services
             }
         }
 
-        public bool Update(int id, TaskDto updatedTask)
+        public bool UpdateTask(int id, TaskItem updatedTask)
         {
             lock (_lock)
             {
@@ -97,7 +98,7 @@ namespace dotnet_app.Services
             }
         }
 
-        public bool Delete(int id)
+        public bool DeleteTask(int id)
         {
             lock (_lock)
             {
