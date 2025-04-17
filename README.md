@@ -15,32 +15,51 @@ Copilot Chat Extension | 0.23.0
 
 ## Demo
 ### Copilot Code Completions
-World's most intelligent autocomplete
+World's most intelligent autocomplete!
 
-1. Copilot Code Completions
-   - Create a `point.cs` file and show how you can use comments to have Copilot code completions suggest code
-   - Describe how Copilot understands what your intent is via context, like file name, comment contents surrounding code and other open files in your workspace.
-1. Interact with Copilot inside a file
-   - Suggestion Selector
-   - Completions Panel (Ctrl + Enter)
-   - Editor Inline Chat (Cmd + I)
+Copilot understands what your intent is via context, like file name, comment contents surrounding code and other open files in your workspace.
+
+1. `point.java`
+
+Copilot code completions even promoted best practices while you code as comments are one of the primary ways of prompting it!
+
+You can also interact with Copilot code completions (+ more) inside a file in other ways:
+- Suggestion Selector
+- Completions Panel (Ctrl + Enter)
+- Editor Inline Chat (Cmd + I)
 
 ### Copilot Chat
 No need to context switch! Everything I need, in my IDE.
 
-Endless possibilities: Brainstorm, Translate, Review, Document, Clarify, Understand, Optimize, Generate, Code!
+Endless possibilities: Brainstorm, Translate, Review, Document, Clarify, Understand, Optimize, Generate, Secure, Code!
 
-1. Chat Commands
-   - /help
-   - /tests
-      - calculator.py
-      - @workspace /tests
-      - pytest tests/ <!-- (remove add max float if it appears) -->
-   - @vscode
-      - "where can I find the setting to enable next edit suggestions?"
+#### Chat Commands
+Chat commands are a great and easy place to start with Copilot Chat. When in doubt, `/help`!
+- /help
+- /tests
+   - calculator.py
+   - @workspace /tests
+   - pytest tests/ <!-- (remove add max float if it appears) -->
+- @vscode
+   - "where can I find the setting to enable next edit suggestions?"
+
+#### Context
+Context in Copilot Chat works differently than it did for code completions. Other than what is currenly visible in your editor, Copilot Chat requires that we explicity add all relevant files as context before submitting our prompt. The easiest ways of incuding files as context are to with drag and drop them into the chat window, or using the `#file:<filename>` tag.
+
+#### Brainstorm
+#### Translate
+#### Optimize
+#### Review
+#### Understand
+
+### Copilot Edits
+For when you want to Copilot Chat to make suggestions inside your files!
+
+Copilot Edits makes sweeping changes across multiple files quick and easy.
+
+1. "Can you add comments and docstrings to all of the files in #folder:"
 
 ### Configuring Copilot
-
 #### Custom Instructions
 Used to set "rules" you want Copilot to follow for all suggestions. A system prompt of sorts.
 
@@ -65,10 +84,4 @@ BofA has Public Code Block enabled. This means, if Copilot generates code that c
 - Ask Copilot to comment out the code it suggests 
 - Break your problem into smaller problems
 
-Generally speaking, when we work with our own large, complex, unique codebases, we won't run into this much. This will mostly come into play when we are starting from scratch or asking Copilot for generic examples. The alternative to the Public Code BLock is Code Referencing, where Copilot will show the public code anyway and let you know what type of license applies to the repo it is sourced from.
-
-#### Unused
-1. Content Exclusion
-1. When to use which "flavor" of Copilot
-   - Chat for brainstorming / understanding / generic questions
-   - Edits when you want to generate specific, generally small to moderate snippets of code
+Generally speaking, when we work with our own large, complex, unique codebases, we won't run into this much. This will mostly come into play when we are starting from scratch or asking Copilot for generic examples. The alternative to the Public Code Block is Code Referencing, where Copilot will show the public code anyway and let you know what type of license applies to the repo it is sourced from.
