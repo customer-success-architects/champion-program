@@ -1,4 +1,4 @@
-# bofa-ambassador-program
+# Bank of America - Ambassador Program
 
 This is a repo containing materials that can be used for future Copilot demos.
 
@@ -8,10 +8,11 @@ Update this section (and the demo as needed) as BofA approves newer versions of 
 
 Tool | Version
 --- | ---
-.NET | 8.0.408
 VS Code | 1.97.1
 Copilot Extension | 1.270.0
 Copilot Chat Extension | 0.23.0
+.NET | 8.0.408
+Python | 3.13.1
 
 ## Demo
 ### Copilot Code Completions
@@ -46,11 +47,15 @@ Context in Copilot Chat works differently than it did for code completions. Othe
 1. Show typing a `#` into chat and reading what each tag specifies
 
 #### Brainstorm
+1. What the best naming convention to use in my .NET project? What's idiomatic?
 #### Translate
-1. Can you translate this Java file into Python?
+1. Can you translate this Java file (`point.java`) into Python?
 #### Optimize
+1. What can I do to improve my .NET app (`DotnetApp`)? I'm preparing it for a production release and need to make sure it's polished.
 #### Review
+1. Do you see any security vulnerabilities in this code (`sql.py`)?
 #### Understand
+1. Can you explain what this file is doing (`server.rs`)?
 
 ### Copilot Edits
 For when you want to Copilot Chat to make suggestions inside your files!
