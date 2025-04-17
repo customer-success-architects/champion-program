@@ -18,11 +18,11 @@ Python | 3.13.1
 ### Copilot Code Completions
 World's most intelligent autocomplete!
 
-Copilot understands what your intent is via context, like file name, comment contents surrounding code and other open files in your workspace.
+Copilot understands what your intent is via context, like file name, comment contents, surrounding code and other open files in your workspace.
 
 1. `point.java`
 
-Copilot code completions even promoted best practices while you code as comments are one of the primary ways of prompting it!
+Copilot code completions even promotes best practices while you code as comments are one of the primary ways of prompting it!
 
 You can also interact with Copilot code completions (+ more) inside a file in other ways:
 - Suggestion Selector
@@ -37,8 +37,8 @@ Endless possibilities: Brainstorm, Translate, Review, Document, Clarify, Underst
 #### Chat Commands
 Chat commands are a great and easy place to start with Copilot Chat. When in doubt, `/help`!
 
-1. Open `calculator.py` and run `/tests`
-   - pytest tests/ <!-- (remove add max float if it appears) -->
+1. Open `calculator.py` and run `/tests` <!-- (remove add max float if it appears) -->
+   - Optionally, run `pytest tests/`
 1. Ask `@vscode Where can I find the setting to render whitespace?`
 
 #### Context
@@ -48,6 +48,7 @@ Context in Copilot Chat works differently than it did for code completions. Othe
 
 #### Brainstorm
 1. What the best naming convention to use in my .NET project? What's idiomatic?
+1. Is it better to use a const or a static variable for something I need to be global in my .NET API?
 #### Translate
 1. Can you translate this Java file (`point.java`) into Python?
 #### Optimize
