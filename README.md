@@ -44,7 +44,9 @@ Chat commands are a great and easy place to start with Copilot Chat. When in dou
    - "where can I find the setting to enable next edit suggestions?"
 
 #### Context
-Context in Copilot Chat works differently than it did for code completions. Other than what is currenly visible in your editor, Copilot Chat requires that we explicity add all relevant files as context before submitting our prompt. The easiest ways of incuding files as context are to with drag and drop them into the chat window, or using the `#file:<filename>` tag.
+Context in Copilot Chat works differently than it did for code completions. Other than what is currently visible in your editor, Copilot Chat requires that we explicitly add all relevant files as context before submitting our prompt. The easiest ways of including files as context are to with drag and drop them into the chat window, or using the `#file:<filename>` tag.
+
+1. Show typing a `#` into chat and reading what each tag specifies
 
 #### Brainstorm
 #### Translate
@@ -57,7 +59,7 @@ For when you want to Copilot Chat to make suggestions inside your files!
 
 Copilot Edits makes sweeping changes across multiple files quick and easy.
 
-1. "Can you add comments and docstrings to all of the files in #folder:"
+1. "Can you add comments and docstrings to all of the files in `#file:"
 
 ### Configuring Copilot
 #### Custom Instructions
@@ -71,16 +73,16 @@ Examples:
 1. Specify (older) versions of languages or frameworks to use
    - "When suggesting .NET code, only suggest code compatible with .NET 8."
    - Note this will not work for versions beyond the model "cut-off" date.
-1. Repo-wide standards or expectatoins for all involved developers
+1. Repo-wide standards or expectations for all involved developers
    - "Whenever possible, use recursion."
 
 #### Public Code Block
-BofA has Public Code Block enabled. This means, if Copilot generates code that closely matches lisenced code in the public domian, the response will be blocked. However, there are ways of helping Copilot avoid suggesting public code.
+BofA has Public Code Block enabled. This means, if Copilot generates code that closely matches licensed code in the public domain, the response will be blocked. However, there are ways of helping Copilot avoid suggesting public code.
 
 - Refactor / Reframe your prompt
 - Ask Copilot to break suggested code into different blocks in its response
 - Ask Copilot to only show changed lines of code
-- Ask Copilot to just show psuedocode
+- Ask Copilot to just show pseudocode
 - Ask Copilot to comment out the code it suggests 
 - Break your problem into smaller problems
 
