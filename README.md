@@ -35,13 +35,10 @@ Endless possibilities: Brainstorm, Translate, Review, Document, Clarify, Underst
 
 #### Chat Commands
 Chat commands are a great and easy place to start with Copilot Chat. When in doubt, `/help`!
-- /help
-- /tests
-   - calculator.py
-   - @workspace /tests
+
+1. Open `calculator.py` and run `/tests`
    - pytest tests/ <!-- (remove add max float if it appears) -->
-- @vscode
-   - "where can I find the setting to enable next edit suggestions?"
+1. Ask `@vscode Where can I find the setting to render whitespace?`
 
 #### Context
 Context in Copilot Chat works differently than it did for code completions. Other than what is currently visible in your editor, Copilot Chat requires that we explicitly add all relevant files as context before submitting our prompt. The easiest ways of including files as context are to with drag and drop them into the chat window, or using the `#file:<filename>` tag.
@@ -50,6 +47,7 @@ Context in Copilot Chat works differently than it did for code completions. Othe
 
 #### Brainstorm
 #### Translate
+1. Can you translate this Java file into Python?
 #### Optimize
 #### Review
 #### Understand
@@ -59,7 +57,7 @@ For when you want to Copilot Chat to make suggestions inside your files!
 
 Copilot Edits makes sweeping changes across multiple files quick and easy.
 
-1. "Can you add comments and docstrings to all of the files in `#file:"
+1. "Can you add comments and docstrings to all of the files in `#file:ITaskService.cs`, `#file:CsvTaskService.cs` and `#file:InMemoryTaskService.cs`"
 
 ### Configuring Copilot
 #### Custom Instructions
